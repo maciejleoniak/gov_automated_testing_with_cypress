@@ -23,7 +23,7 @@ The website which I automated is: https://www.gov.pl/<br>
    
 2. Clone this repository to your local machine using console:
 ```sh
-git clone https://github.com/maciejleoniak/gov_playwright_testing.git
+git clone https://github.com/maciejleoniak/gov_automated_testing_with_cypress.git
 ```
 3. Go to the repository directory:
 ```sh
@@ -40,4 +40,4 @@ npx cypress run
 
 #### Result of tests 
 
-![Result of tests - screenshot](../gov_automated_testing_with_cypress/cypress/screenshots/results/Screenshot%202023-10-25%20at%2022.31.34.png)
+![Result of tests - screenshot](./cypress/screenshots/results/Screenshot%202023-10-25%20at%2022.31.34.png)

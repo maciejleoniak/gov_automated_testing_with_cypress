@@ -43,4 +43,4 @@ npx cypress run
 
 #### Result of tests 
 
-![Result of tests - screenshot](./cypress/screenshots/Screenshot%202023-10-26%20at%2019.11.50.png)
+![Result of tests - screenshot](./cypress/screenshots/Screenshot%202023-10-26%20at%2010.52.47.png)

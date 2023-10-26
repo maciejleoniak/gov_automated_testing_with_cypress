@@ -9,17 +9,19 @@ describe('User should be able to filter search results: period of time, ministry
 
     it('period of time - example: "Period: ostatni rok" ', () => {
         const searchQuery = dataSearch.searchQuery;
-
+       
         MainPage.searchFor(searchQuery);
-        MainPage.filterSearchResultByLastYear();
+        MainPage.filterSearchResultByPeriod();
         MainPage.SearchResultQuantityVerification();
     });
 
     it('ministry unit - example: "Biuletyn Informacji Publicznej" ', () => {
         const searchQuery = dataSearch.searchQuery;
+        const ministryUnit = dataSearch.ministryUnit;
 
         MainPage.searchFor(searchQuery);
-        MainPage.filterSearchResultByMinistry();
+        MainPage.filterSearchResultByMinistry(ministryUnit);
         MainPage.SearchResultQuantityVerification();
     });
 });
+

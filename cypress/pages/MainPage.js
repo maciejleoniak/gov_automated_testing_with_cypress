@@ -27,13 +27,13 @@ class MainPage {
         cy.wait(1000);
     };
 
-    filterSearchResultByLastYear() {
-        SearchResultFiltrComponent.periodYearFilter();
+    filterSearchResultByPeriod() {
+        SearchResultFiltrComponent.periodFilter();
         cy.wait(1000);
     };
 
-    filterSearchResultByMinistry() {
-        SearchResultFiltrComponent.ministryFilter();
+    filterSearchResultByMinistry(ministryUnit) {
+        SearchResultFiltrComponent.ministryFilter(ministryUnit);
         cy.wait(1000);
     };
 

@@ -1,5 +1,7 @@
 {
   "searchQuery": "dom",
   "tabSearchQuery": "mandat",
-  "noResults": "invaildQuery"
+  "noResults": "invaildQuery",
+  "ministryUnit": "Biuletyn",
+  "periodTime": "Ostatni rok"
 }

@@ -12,6 +12,8 @@ describe('User should be able to check special information by a search query', (
         const tabSearchQuery = dataSearch.tabSearchQuery;
 
         TabsPage.goToCitizenTab();
-        TabsPage.SearchServiceTabVerification(tabSearchQuery);
+        TabsPage.searchTabFor(tabSearchQuery);
+        TabsPage.tabRoute(tabSearchQuery);
+        TabsPage.isSearchResultTabHaveProperContent(tabSearchQuery);
     });
 });

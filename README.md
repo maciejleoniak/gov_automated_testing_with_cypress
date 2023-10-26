@@ -39,8 +39,8 @@ npx cypress run
 ```
 #### Points for improvement
 
-1. Set up the parameters for the filter
+1. Moving the time parameter from the SearchResultFiltrComponent to the fixture data 
 
 #### Result of tests 
 
-![Result of tests - screenshot](./cypress/screenshots/results/Screenshot%202023-10-26%20at%2019.11.50.png)
+![Result of tests - screenshot](./cypress/screenshots/Screenshot%202023-10-26%20at%2019.11.50.png)

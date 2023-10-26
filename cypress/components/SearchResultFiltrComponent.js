@@ -1,18 +1,19 @@
 class SearchResultFiltrComponent {
 
-    periodButtonSelector = '#select-period-button';
-    periodYearSelector = '#custom-select-period-check-1';
+    periodButtonSelector = '#custom-select-period-dropdown';
     ministryButtonSelector = '#select-ministryid-button';
-    ministryId12Selector = '#custom-select-ministryid-opt-12';
+    ministrySearchInputSelector = '#custom-select-ministryid-dropdown > div.dropdown-header > input';
 
-    periodYearFilter(){
-        cy.get(this.periodButtonSelector).click();
-        cy.get(this.periodYearSelector).click({ force: true });
+    periodFilter() {
+        cy.get(this.periodButtonSelector).click({ force: true });
+        const optionLabel = "Ostatni rok";
+        cy.contains('#custom-select-period-dropdown div[role="option"] label', optionLabel).click();
     };
-
-    ministryFilter(){
+   
+    ministryFilter(ministryUnit) {
         cy.get(this.ministryButtonSelector).click();
-        cy.get(this.ministryId12Selector).click();
+        cy.get(this.ministrySearchInputSelector).type(ministryUnit);
+        cy.contains('div[role="option"].custom-checkbox', ministryUnit).click();
     };
 };
 

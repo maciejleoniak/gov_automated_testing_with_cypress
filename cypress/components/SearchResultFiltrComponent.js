@@ -5,7 +5,7 @@ class SearchResultFiltrComponent {
     ministryButtonSelector = '#select-ministryid-button';
     ministryId12Selector = '#custom-select-ministryid-opt-12';
 
-    periodYearFiltr(){
+    periodYearFilter(){
         cy.get(this.periodButtonSelector).click();
         cy.get(this.periodYearSelector).click({ force: true });
     };

@@ -37,7 +37,10 @@ npm install
 ```sh
 npx cypress run
 ```
+#### Points for improvement
+
+1. Set up the parameters for the filter
 
 #### Result of tests 
 
-![Result of tests - screenshot](./cypress/screenshots/results/Screenshot%202023-10-25%20at%2022.31.34.png)
+![Result of tests - screenshot](./cypress/screenshots/results/Screenshot%202023-10-26%20at%2019.11.50.png)

@@ -9,18 +9,22 @@ describe('User should has access to selected tabs: "Dla obywatela", "Dla Przedsi
 
     it('tab:"Dla obywatela" ', () => {
         TabsPage.goToCitizenTab();
+        TabsPage.verifyCitizenTabNavigation();
     });
 
     it('tab:"Dla przedsiębiorcy" ', () => {
         TabsPage.goToBusinessTab();
+        TabsPage.verifyBusinessTabNavigation()
     });
 
     it('tab:"Dla urzędnika" ', () => {
         TabsPage.goToOfficialsTab();
+        TabsPage.verifyOfficialsTabNavigation();
     });
 
     it('tab:"Dla rolnika" ', () => {
         TabsPage.goToFarmerTab();
+        TabsPage.verifyFarmerTabNavigation();
     });
 });
 

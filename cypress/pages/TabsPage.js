@@ -1,4 +1,4 @@
-import ServiceTabsComponent from "../components/ServiceTabsComponent";
+import ServiceTabsHandler from "../components/ServiceTabsComponent";
 
 
 class TabsPage {
@@ -7,35 +7,47 @@ class TabsPage {
     tabRouteTitle = '#main-content > div > h2';
 
     goToCitizenTab() {
+        ServiceTabsHandler.expandCitizenTab();
+    };
+
+    verifyCitizenTabNavigation() {
         const h2Title = 'obywatel';
-        ServiceTabsComponent.expandCitizenTab();
         cy.get(this.tabTitle)
             .should('include.text', h2Title);
     };
 
     goToBusinessTab() {
+        ServiceTabsHandler.expandBusinessTab();
+    };
+
+    verifyBusinessTabNavigation() {
         const h2Title = 'przedsiębiorcy';
-        ServiceTabsComponent.expandBusinessTab();
         cy.get(this.tabTitle)
             .should('include.text', h2Title);
     };
 
     goToOfficialsTab() {
+        ServiceTabsHandler.expandOfficialsTab();
+    };
+
+    verifyOfficialsTabNavigation() {
         const h2Title = 'urzędnik';
-        ServiceTabsComponent.expandOfficialsTab();
         cy.get(this.tabTitle)
             .should('include.text', h2Title);
     };
 
     goToFarmerTab() {
+        ServiceTabsHandler.expandFarmerTab();
+    };
+
+    verifyFarmerTabNavigation() {
         const h2Title = 'rolnik';
-        ServiceTabsComponent.expandFarmerTab();
         cy.get(this.tabTitle)
             .should('include.text', h2Title);
     };
 
     searchTabFor(tabSearchQuery) {
-        ServiceTabsComponent.serviceSearchField(tabSearchQuery);
+        ServiceTabsHandler.serviceSearchField(tabSearchQuery);
         cy.wait(1000);
     };
 

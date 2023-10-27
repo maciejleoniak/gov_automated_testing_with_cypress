@@ -37,12 +37,12 @@ class MainPage {
         cy.wait(1000);
     };
 
-    SearchResultContentVerification(searchQuery) {
+    verifySearchResultContentContains(searchQuery) {
         cy.get(this.searchResultContentSelector)
             .should('include.text', searchQuery);
     };
 
-    SearchResultQuantityVerification() {
+    verifySearchResultItemsQuantity() {
         cy.get(this.searchResultCounterSelector)
             .invoke('text')
             .then(searchCounter => {
@@ -53,7 +53,7 @@ class MainPage {
             });
     };
 
-    SearchNoResultQuantityVerification() {
+    verifySearchCompletedWithNoResult() {
         cy.get(this.searchResultCounterSelector)
             .invoke('text')
             .then(searchCounter => {

@@ -11,14 +11,14 @@ describe('User should search for a phrase and get relevant results', () => {
         const searchQuery = dataSearch.searchQuery;
 
         MainPage.searchFor(searchQuery);
-        MainPage.SearchResultContentVerification(searchQuery);
-        MainPage.SearchResultQuantityVerification();
+        MainPage.verifySearchResultContentContains(searchQuery);
+        MainPage.verifySearchResultItemsQuantity();
     });
 
     it('if there is no record for query, the search shows 0 results ', () => {
         const noResults = dataSearch.noResults;
 
         MainPage.searchForInvalid(noResults);
-        MainPage.SearchNoResultQuantityVerification();
+        MainPage.verifySearchCompletedWithNoResult();
     });
 });

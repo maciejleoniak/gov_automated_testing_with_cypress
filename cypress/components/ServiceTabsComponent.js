@@ -1,4 +1,4 @@
-class ServiceTabsComponent {
+class ServiceTabsHandler {
 
     citizensTabSelector = '#citizens-tab';
     expandCitizenTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-obywatela"]';
@@ -37,5 +37,5 @@ class ServiceTabsComponent {
     };
 };
 
-module.exports = new ServiceTabsComponent();
+module.exports = new ServiceTabsHandler();
 

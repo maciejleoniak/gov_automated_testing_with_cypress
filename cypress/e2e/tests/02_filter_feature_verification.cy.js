@@ -12,7 +12,7 @@ describe('User should be able to filter search results: period of time, ministry
        
         MainPage.searchFor(searchQuery);
         MainPage.filterSearchResultByPeriod();
-        MainPage.SearchResultQuantityVerification();
+        MainPage.verifySearchResultItemsQuantity();
     });
 
     it('ministry unit - example: "Biuletyn Informacji Publicznej" ', () => {
@@ -21,7 +21,7 @@ describe('User should be able to filter search results: period of time, ministry
 
         MainPage.searchFor(searchQuery);
         MainPage.filterSearchResultByMinistry(ministryUnit);
-        MainPage.SearchResultQuantityVerification();
+        MainPage.verifySearchResultItemsQuantity();
     });
 });
 

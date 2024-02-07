@@ -1,33 +1,34 @@
 class ServiceTabsHandler {
 
     citizensTabSelector = '#citizens-tab';
-    expandCitizenTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-obywatela"]';
+    expandTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-';
+    CitizenSelector = 'obywatela"]';
     businessTabSelector = '#business-tab';
-    expandBusinessTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-przedsiebiorcy"]';
+    BusinessSelector = 'przedsiebiorcy"]';
     officialsTabSelector = '#officials-tab';
-    expandOfficialsTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-urzednika"]';
+    OfficialsSelector = 'urzednika"]';
     farmerTabSelector = '#farmer-tab'
-    expandFarmerTabSelector = 'a.see-more-button.btn.btn-secondary[href="/web/gov/uslugi-dla-rolnika"]'
+    FarmerSelector = 'rolnika"]'
     serviceSearchFieldSelector = '#services-search-input';
 
     expandCitizenTab() {
         cy.get(this.citizensTabSelector).click();
-        cy.get(this.expandCitizenTabSelector).click();
+        cy.get(`${this.expandTabSelector}${this.CitizenSelector}`).click();
     };
 
     expandBusinessTab() {
         cy.get(this.businessTabSelector).click();
-        cy.get(this.expandBusinessTabSelector).click();
+        cy.get(`${this.expandTabSelector}${this.BusinessSelector}`).click();
     };
 
     expandOfficialsTab() {
         cy.get(this.officialsTabSelector).click();
-        cy.get(this.expandOfficialsTabSelector).click();
+        cy.get(`${this.expandTabSelector}${this.OfficialsSelector}`).click();
     };
 
     expandFarmerTab() {
         cy.get(this.farmerTabSelector).click();
-        cy.get(this.expandFarmerTabSelector).click();
+        cy.get(`${this.expandTabSelector}${this.FarmerSelector}`).click();
     };
 
     serviceSearchField(tabSearchQuery) {
